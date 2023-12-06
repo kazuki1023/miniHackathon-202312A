@@ -53,3 +53,8 @@ services:
       - mysql
     ports:
       - 1234:80
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
