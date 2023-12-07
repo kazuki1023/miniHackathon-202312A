@@ -27,8 +27,10 @@
                 </header>
             @endif
 
+            @include('layouts.sidebar')
+
             <!-- Page Content -->
-            <main>
+            <main class="ml-64">
                 {{ $slot }}
             </main>
         </div>
