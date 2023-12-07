@@ -76,6 +76,15 @@
 - issue番号のブランチを作成して作業
 - タスクはprojectで管理してください
 
+## 注意
+- 作業後、以下のコマンドを実行してください
+```
+docker-compose exec app composer analyse
+```
+- エラーが出たら、修正してください
+- これは静的解析を行うコマンドです。
+  - 静的解析とは、コードの品質をチェックすることです。
+
 ## 参考
 ### Laravel インストール方法
 1. `docker compose build --no-cache` (ビルドする)
