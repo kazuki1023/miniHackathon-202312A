@@ -18,5 +18,5 @@ jobs:
             issue_number: issueNumber,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: 'イシューが完了しました！こちらの写真をご覧ください。![Image](https://drive.google.com/file/d/1YwObpePNubKe0XrOUnoBZ6wl4jtl14ST/view?usp=sharing)'
+            body: '![Image](./Image/3BD53A41-0D42-476A-A814-66B6CE091BC8.jpg)'
           })
