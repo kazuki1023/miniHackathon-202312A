@@ -18,5 +18,5 @@ jobs:
             issue_number: issueNumber,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: '![Image](./Image/3BD53A41-0D42-476A-A814-66B6CE091BC8.jpg)'
+            body: '![Image](https://github.com/kazuki1023/miniHackathon-202312/raw/main/Image/3BD53A41-0D42-476A-A814-66B6CE091BC8.jpg)'
           })
