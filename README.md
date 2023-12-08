@@ -16,6 +16,7 @@
 - 作成したアプリは、サークル紹介サイトの管理者(各サークルの運営代)が使うことになります
 - 作成したアプリを通じて、サークル紹介サイトの管理者が、サークル紹介サイトのコンテンツを編集できるようにしてください。
 - サークルの紹介サイト自体は、去年作成したもので大丈夫です。管理アプリを通じて、文言の変更であったり、写真の追加ができるようになっていればokです。
+- パソコンでの使用を想定してるので、スマホでの使用は考えなくて大丈夫です。
 
 ### アプリの仕様
 
@@ -77,29 +78,46 @@
 - タスクはprojectで管理してください
 
 ## 注意
+- 一部の需要を考慮して`arisatan`コマンドでも動くようになってます
+- 配色等は各自変更してもらって大丈夫ですが、以下の条件を守ってください
+    - tailwind以外使わない
+    - tailwind.config.jsにcolorの設定を書く
+        - ここはjoberに聞いてください
+- 作業前のnodeコンテナで以下のコマンドを実行してください
+```
+docker compose exec node npm run dev
+```
+
+- これは、nodeコンテナでnpm run devを実行するコマンドです。
+- これでtailwind等のコンパイルができるようになります。
+
 - 作業後、以下のコマンドを実行してください
 ```
-docker-compose exec app composer analyse
+docker compose exec app composer analyse
 ```
 - エラーが出たら、修正してください
 - これは静的解析を行うコマンドです。
   - 静的解析とは、コードの品質をチェックすることです。
 
-## 参考
-### Laravel インストール方法
-1. `docker compose build --no-cache` (ビルドする)
-2. `docker compose up -d` (コンテナをたてる)
-3. `docker compose exec app sh` (appコンテナに入る)
-4. `composer create-project --prefer-dist laravel/laravel . "10.*"` (src配下にLaravel10をインストール)
-5. ブラウザで `http://localhost` にアクセスし、Laravelのロゴ入りのトップページが表示されることを確認
+```
+docker compose exec node npx prettier --write .
+```
+- これは、prettierを実行するコマンドです。
+- これでコードのフォーマットが整います。
+
+## 環境構築方法
+```
+    ### Laravel インストール方法
+    1. `docker compose build --no-cache` (ビルドする)
+    2. `docker compose up -d` (コンテナをたてる)
+    3. `docker compose exec app sh` (appコンテナに入る)
+    4. `composer create-project --prefer-dist laravel/laravel . "10.*"` (src配下にLaravel10をインストール)
+    5. ブラウザで `http://localhost` にアクセスし、Laravelのロゴ入りのトップページが表示されることを確認
+```
 
 <img width="1446" alt="スクリーンショット 2023-06-09 19 39 34" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/69d42fe3-4e3a-4087-91a9-c55640a2671f">
 
-
-### データベースの作成
-1. appコンテナに入っていることを確認
-    - (入っていなければ、`docker compose exec app sh`)
-2. `src > .env` の内容を以下のように書き換える
+1. `src > .env` の内容を以下のように書き換える
     ```
     DB_CONNECTION=mysql
     DB_HOST=mysql
@@ -108,4 +126,8 @@ docker-compose exec app composer analyse
     DB_USERNAME=posse
     DB_PASSWORD=password
     ```
+2. 以下のコマンドを打つ
+```
+make arisatan
+```
 
