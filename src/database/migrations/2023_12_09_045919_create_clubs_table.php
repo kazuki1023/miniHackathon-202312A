@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name')->comment('サークル名');
             $table->string('frequency')->comment('活動頻度');
             $table->string('place')->comment('活動場所');
-            $table->array('gender_ratio_array')->comment('男女比');
-            $table->array('department_ratio_array')->comment('学部比');
+            $table->json('gender_ratio_array')->comment('男女比');
+            $table->json('department_ratio_array')->comment('学部比');
             $table->string('instagram_link')->comment('Instagramリンク');
             $table->string('twitter_link')->comment('Twitterリンク');
             $table->string('line_link')->comment('LINEリンク');
