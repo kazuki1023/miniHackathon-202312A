@@ -358,44 +358,7 @@ body.appear #vidual-area::after{
     height: 60vh;
 }
 
-#service .service-img-practice{
-    height: 60vh;
-    background:url("../img/practice/LINE_ALBUM_230103_12.jpg") no-repeat center;
-    background-size: contain;
-}
-#service .service-img-propotion{
-    height: 60vh;
-    background:url("") no-repeat center;
-    background-size: contain;
-}
-#service .service-img-appeal{
-    height: 60vh;
-    background:url("../img/practice/IMG_1370.JPG") no-repeat center;
-    background-size: contain;
-}
 
-#service .service-img01{
-    height: 60vh;
-    background:url("../img/plan/IMG_7238.jpg") no-repeat center;
-    background-size: contain;
-}
-#service .service-img03{
-    height: 60vh;
-    background:url("../img/plan/IMG_7238.jpg") no-repeat center;
-    background-size: contain;
-}
-.service-img02{
-    height: 60vh;
-    background:url("../img/summercamp/IMG_4247.jpg") no-repeat center;
-    background-size: contain;
-    width: 100%;
-}
-.service-img04{
-    height: 60vh;
-    background:url("../img/summercamp/IMG_5323.jpg") no-repeat center;
-    background-size: contain;
-    width: 100%;
-}
 .summercamp {
     padding: 10% 0 0 10%;
 }
@@ -426,11 +389,7 @@ body.appear #vidual-area::after{
     height: 60vh;
 }
 
-.news-img{
-    height: 60vh;
-    background:url("../img/summercamp/IMG_5398.jpg") no-repeat center;
-    background-size: contain;
-}
+
 
 .news-img::after{
      content:'';
