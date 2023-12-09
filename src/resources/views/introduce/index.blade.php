@@ -191,17 +191,6 @@
                 </section>
             </div>
         </section>
-        <div class="news-img-wrapper bgextend bgRLextendTrigger">
-            <div class="bgappearTrigger">
-                <div class="news-img"></div>
-            </div>
-        </div>
-        <div class="service-img-wrapper bgextend bgLRextendTrigger summercamp">
-            <div class="bgappearTrigger">
-                <div class="service-img04"></div>
-            </div>
-            <span id="event_guide"></span>
-        </div>
         <div class="bgextend bgLRextendTrigger">
             <div class="bgappearTrigger">
                 <section id="contact">
