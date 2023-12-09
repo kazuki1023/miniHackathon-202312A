@@ -9,7 +9,41 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+
+                    <div class="relative overflow-x-auto">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        名前
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        メールアドレス
+                                    </th>
+                                    @if ($role == 1)
+                                    <th scope="col" class="px-6 py-3">
+                                        所属サークル
+                                    </th>
+                                    @endif
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($managers as $manager)
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $manager->name }}
+                                </th>
+                                <td class="px-6 py-4">
+                                {{ $manager->email }}
+                                </td>
+                                @if ($role == 1)
+                                <td class="px-6 py-4">
+                                {{ $manager->club_id }}
+                                </td>
+                                @endif
+                            </tr>
+                            @endforeach
+    
                 </div>
             </div>
         </div>
