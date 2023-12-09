@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClubController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +32,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/users', function () {
     return view('introduce.index');
 });
+
+// サークル追加ルーティング処理
+Route::get('/club/create', [ClubController::class, 'create'])->name('club.create');
+Route::post('/club/store', [ClubController::class, 'store'])->name('club.store');
 
 require __DIR__.'/auth.php';
