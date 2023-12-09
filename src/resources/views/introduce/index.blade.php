@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tla 新歓サイト</title>
+  <!--=============Google Font ===============-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%7COswald&display=swap" rel="stylesheet">
+  <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+  <!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+  <!--機能編 6-2-1 複数の画像を一覧で見せる-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+  <!-- 人数比、学部比のグラフ作成の外部ライブラリ -->
+  <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js" defer></script>
+  <!-- 実際のグラフ -->
+  <script src="./js/sex_chart.js" defer></script>
+  <script src="./js/faculty_chart.js" defer></script>
+  @vite(['resources/css/introduce/reset.css', 'resources/css/introduce/layout.css', 'resources/css/introduce/part.css', 'resources/js/introduce/sex_chart.js', 'resources/js/introduce/faculty_chart.js', 'resources/js/introduce/script.js'])
+  <!--自作のCSS-->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/parts.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+</head>
+<body>
+  <header id="header">
+    <div class="g-nav-openbtn">
+      <div class="openbtn-area">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav id="g-nav">
+        <div id="g-nav-list">
+          <ul id="g-navi" class="nav01c">
+            <li>
+              <a href="#">Top</a>
+            </li>
+            <li >
+              <a href="#news_guide">News</a>
+            </li>
+            <li>
+              <a href="#service">練習頻度 &#47; 練習場所</a>
+            </li>
+            <li>
+              <a href="#ratio_guide">男女比 &amp; 学部比</a>
+            </li>
+            <li>
+              <a href="#appeal_guide">TLAの魅力</a>
+            </li>
+            <li>
+              <a href="#event_guide">イベント</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="open-btn"></div>
+  </header>
+  <div id="search-wrap">
+    <div class="close-btn"><span></span><span></span></div>
+    <div class="search-area">
+    <form role="search" method="get" action="">
+    <input type="text" value="" name="" id="search-text" placeholder="search">
+    <input type="submit" id="searchsubmit" value="">
+    </form>
+    <!--/search-area--></div>
+    <!--/search-wrap--></div>
+    
+    <section id="vidual-area">
+    
+    <div id="slider-area" class="bgextend bgRLextendTrigger">
+        <div class="bgappearTrigger">
+            <div id="slider"></div>
+        </div>
+    <!--/slider-area--></div>
+    <h2>
+      <span class="js_typing">Tennis</span>
+      <br>
+      <span class="js_typing">Lovers</span>
+      <br>
+      <span class="js_typing">Association</span>
+    </h2>
+    <dl>
+        <dt>Follow Us</dt>
+        <dd>
+          <ul class="main_sns">
+            <li>
+              <a href="https://instagram.com/keio_tla_2023?igshid=YmMyMTA2M2Y=" class="main_sns_item" target="_blank"><img src="./img/logo/icon-instagram.svg" alt=""></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/keio_tla_2023_" class="main_sns_item" target="_blank"><img src="./img/logo/icon-twitter.svg" alt=""></a>
+            </li>
+            <li>
+              <a href="https://lin.ee/DBmNhSI" class="main_sns_item"><img src="./img/logo/icon-line.svg" alt=""></a>
+            </li>
+          </ul>
+        </dd>
+    </dl>
+    <div class="scrolldown1"><span id="news_guide">Scroll</span></div>
+    <!--/vidual-area--></section>
+
+    <main id="main-area">
+      <section id="news">
+        <h2 class="js_typing" id="news_title">News</h2>
+        <div class="tab-area bgextend bgLRextendTrigger">
+          <div class="bgappearTrigger">
+            <ul class="tab">
+              <li class="active"><a href="#topics">イベント</a></li>
+              <!-- <li><a href="#parts">イベント</a></li> -->
+              <!-- <li><a href="#cars">活動内容</a></li> -->
+            </ul>
+            <div class="tab-choice-area">
+              <div id="topics" class="area is-active">
+                <ul>
+                  <li>
+                    <li href=""><time datetime="2023-03-05">2023.03</time>1年生合宿開催
+                    </li>
+                  </li>
+                  <li>
+                    <li href=""><time datetime="2023-02-20">2023.02</time>春合宿開催
+                    </li>
+                  </li>
+                  <li>
+                    <li href=""><time datetime="2022-12-17">2022.12</time>改選を実施しました！
+                    </li>
+                  </li>
+                  <li>
+                    <li href=""><time datetime="2022-11-27">2022.11</time>ミックスダブルス開催
+                    </li>
+                  </li>
+                  <li>
+                    <li href="#"><time datetime="2022-10-09">2022.10</time>球技大会開幕
+                    </li>
+                  </li>
+                  <li>
+                    <li href="#"><time datetime="2022-08-26">2022.08</time>夏合宿開催
+                    </li>
+                  </li>
+                  <li>
+                    <li href="#"><time datetime="2022-07-30">2022.07</time>日吉コンパ開催
+                    </li>
+                  </li>
+                  <li>
+                    <li href="#"><time datetime="2022-10-09">2022.06</time>1年生コンパ
+                    </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="js_typing" id="news_subtitle">これ以外のイベントも盛り沢山</h3>
+      </section>
+      <section id="service">
+        <h2 class="js_typing">慶應公認サークルTLA</h2>
+        <p class="service-lead">
+          <span class="bgextend bgRLextendTrigger">
+            <span class="bgappearTrigger">TLAは今年で設立64年目の歴史あるサークル
+            </span>
+          </span>
+        </p>
+        <div class="service-area">
+          <section class="bgextend bgLRextendTrigger">
+            <div class="bgappearTrigger">
+              <header>
+                <h3 class="js_typing">練習頻度 &#47; 練習場所</h3>
+                <h4 class="js_typing">練習頻度</h4>
+                <p>月曜 &#126; 金曜の週５で活動中</p>
+                <p>参加は自由、自分の予定に合わせて練習できます</p>
+              </header>
+                <h4 class="js_typing">練習場所</h4>
+                <p>練習は多摩川のコート、希望があれば新横浜や大井町でも &#033;</p>
+                <p>日吉駅から5分</p>
+                <p>日吉・三田から乗換なし</p>
+                <a href="#contact" class="btnlinestretches2">DM</a>
+            </div>
+            <div class="service-img-wrapper bgextend bgLRextendTrigger">
+              <div class="bgappearTrigger">
+                <div class=" service-img-practice"></div>
+              </div>
+            </div>
+            <span id="ratio_guide"></span>
+          </section>
+          <section class="bgextend bgLRextendTrigger">
+            <div class="bgappearTrigger">
+              <header>
+                <h3 class="js_typing">男女比 &amp; 学部比</h3>
+                <p>現在約140人が在籍中</p>
+              </header>
+              <a href="#contact" class="btnlinestretches2">DM</a>
+            </div>
+            <div class="ratio_chart">
+              <div class="sex_chart"></div>
+              <div class="faculty_chart"></div>
+            </div>
+            <div class="service-img-wrapper bgextend bgLRextendTrigger">
+              <div class="bgappearTrigger">
+                <div class="service-img01 service-img-propotion"></div>
+              </div>
+            </div>
+            <span id="appeal_guide"></span>
+          </section>
+          <section class="bgextend bgLRextendTrigger">
+            <div class="bgappearTrigger">
+              <header>
+                <h3 class="js_typing">TLAの魅力</h3>
+                <p>中規模だからみんな仲良し</p>
+                <p>月 &#126; 金のいつ参加してもOK</p>
+                <p>全体での飲み会なし &times;</p>
+                <p>テニサー部費最安値</p>
+                <p>今年で設立64年目</p>
+              </header>
+                <a href="#contact" class="btnlinestretches2">DM</a>
+            </div>
+            <div class="service-img-wrapper bgextend bgLRextendTrigger">
+              <div class="bgappearTrigger">
+                <div class="service-img-appeal"></div>
+              </div>
+            </div>
+          </section>
+          <h3 class="js_typing">夏合宿</h3>
+          <div class="service-img-wrapper bgextend bgLRextendTrigger">
+            <div class="bgappearTrigger">
+              <div class="service-img02"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="news-img-wrapper bgextend bgRLextendTrigger">
+        <div class="bgappearTrigger">
+          <div class="news-img"></div>
+        </div>
+      </div>
+      <div class="service-img-wrapper bgextend bgLRextendTrigger summercamp">
+        <div class="bgappearTrigger">
+          <div class="service-img04"></div>
+        </div>
+        <span id="event_guide"></span>
+      </div>
+      <h3 class="js_typing event_title">イベント</h3>
+      <ul id="gallery" class="gallery">
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/plan/IMG_4135 .JPG" data-lightbox="gallery-group" data-title="2022.05. 練習終わり！">
+              <img src="./img/plan/IMG_4135 .JPG" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/plan/firstgradeCompa.jpg" data-lightbox="gallery-group" data-title="2022.06. １年生コンパ">
+              <img src="./img/plan/firstgradeCompa.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/plan/IMG_1728.jpg" data-lightbox="gallery-group" data-title="2022.07. 最終練アフター!!!">
+              <img src="./img/plan/IMG_1728.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/summercamp/IMG_2097.jpg" data-lightbox="gallery-group" data-title="2022.08. 夏合宿、サークル内対抗戦！">
+              <img src="./img/summercamp/IMG_2097.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/summercamp/IMG_3092.jpg" data-lightbox="gallery-group" data-title="2022.09. メンバー合宿">
+              <img src="./img/summercamp/IMG_3092.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/plan/IMG_2306.jpg" data-lightbox="gallery-group" data-title="2022.09. 浅草女子会">
+              <img src="./img/plan/IMG_2306.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/plan/IMG_0691.jpg" data-lightbox="gallery-group" data-title="2022.11. 球技大会開幕！！！">
+              <img src="./img/plan/IMG_0691.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/change_generation/LINE_ALBUM_230103_11.jpg" data-lightbox="gallery-group" data-title="2022.12. 改選実施！！！">
+              <img src="./img/change_generation/LINE_ALBUM_230103_11.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/WinterCamp/IMG_7718_Original.jpg" data-lightbox="gallery-group" data-title="2023.02. 春合宿">
+              <img src="./img/WinterCamp/IMG_7718_Original.jpg" alt="">
+            </a>
+          </div>
+        </li>
+        <li class="bgextend bgLRextendTrigger zoomInRotate">
+          <div class="bgappearTrigger">
+            <a href="./img/FirstCamp/fotor_2023-3-15_8_41_55.jpg" data-lightbox="gallery-group" data-title="2022.03. 1年生企画の合宿">
+              <img src="./img/FirstCamp/fotor_2023-3-15_8_41_55.jpg" alt="">
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="bgextend bgLRextendTrigger">
+        <div class="bgappearTrigger">
+          <section id="contact">
+            <div class="contact-detail">
+              <h2>Contact</h2>
+              <p>instagram,twitterのDMにて気軽にお問い合わせください</p>
+            </div>
+            <div class="contact-tel">
+              <ul class="contact_sns">
+                <li>
+                  <a href="https://instagram.com/keio_tla_2023?igshid=YmMyMTA2M2Y=" class="main_sns_item" target="_blank"><img src="./img/logo/icon-instagram.svg" alt=""></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/keio_tla_2023_" class="main_sns_item" target="_blank"><img src="./img/logo/icon-twitter.svg" alt=""></a>
+                </li>
+                <li>
+                  <a href="https://lin.ee/DBmNhSI" class="main_sns_item"><img src="./img/logo/icon-line.svg" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+        <div class="footer-info">
+        <p class="footer-logo">TLA</p>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#news_guide">News</a></li>
+            <li><a href="#service">practice</a></li>
+            <li><a href="#ratio_guide">ratio</a></li>
+            <li><a href="#appeal_guide">魅力</a></li>
+            <li><a href="#event_guide">イベント</a></li>
+          </ul>
+          <small>Copyright &copy; TLA.</small>
+        </div>
+      <p id="page-top" class="hide-btn"><a href="#"><span></span></a></p>
+    </footer>
+    <!--/container--></div>
+    <!--=============JS ===============--> 
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--機能編 6-2-1 複数の画像を一覧で見せる-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <!--印象編 8-6 アルファベットがランダムに変化して出現-->
+    <script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></script>
+    <!--自作のJS-->
+    <script src="js/script.js"></script>
+    </body>
+</html>
