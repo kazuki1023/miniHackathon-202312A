@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('details', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('place')->nullable(false);
-            $table->string('time')->nullable(false);
+            $table->string('place');
+            $table->string('time')->comment('頻度');
             $table->timestamps();
         });
     }

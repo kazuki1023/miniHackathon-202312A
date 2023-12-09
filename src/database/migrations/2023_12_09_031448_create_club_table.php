@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('club', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('name')->nullable(false);
+            $table->string('name');
             $table->timestamps();
         });
     }

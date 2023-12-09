@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('instagram')->nullable(false);
-            $table->string('twitter')->nullable(false);
-            $table->string('line')->nullable(false);;
-            $table->integer('male')->nullable(false);
-            $table->integer('female')->nullable(false);
+            $table->string('instagram');
+            $table->string('twitter');
+            $table->string('line');
+            $table->integer('male');
+            $table->integer('female');
             $table->timestamps();
         });
     }

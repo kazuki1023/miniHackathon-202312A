@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->integer('rikou')->nullable(false);
-            $table->integer('kei')->nullable(false);
-            $table->integer('shou')->nullable(false);
-            $table->integer('bun')->nullable(false);
-            $table->integer('hou')->nullable(false);
-            $table->integer('sfc')->nullable(false);
+            $table->integer('rikou');
+            $table->integer('kei');
+            $table->integer('shou');
+            $table->integer('bun');
+            $table->integer('hou');
+            $table->integer('sfc');
             $table->timestamps();
         });
     }
