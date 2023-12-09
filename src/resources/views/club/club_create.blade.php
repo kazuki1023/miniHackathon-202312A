@@ -22,11 +22,7 @@
 
                         <div>
                             <label for="form-club">サークル名</label>
-                            <select name="club" id="form-club" required>
-                                @foreach ($clubs as $club)
-                                    <option value="{{ $club->id }}">{{ $club->name }}</option>
-                                @endforeach
-                            </select>
+                            <input type="text" name="club" id="form-club" required>
                         </div>
 
                         <div>

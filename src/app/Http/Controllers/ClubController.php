@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Club;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClubController extends Controller
@@ -11,28 +13,35 @@ class ClubController extends Controller
         return view('club.create');
     }
 
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'content' => 'required|max:200',
-            'supplement' => 'max:200',
-        ]);
-        // 画像フォームでリクエストした画像を取得
-        $img = $request->file('image');
-        // storage > public > img配下に画像が保存される
-        $path = $img->store('img','custom');
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'name' => 'required',
+    //         'email' => 'required',
+    //         'password'=> 'required',
+    //         'club' => 'required',
+    //     ]);
+    //     // 登録するもの : $request:User -> name, email, password / Club -> name
+    //     // Club -> id / User -> club_id はidを取得してから登録する
 
+    //     $club = new Club;
+    //     $user = new User;
+        
+    //     // 最後のidを取得する
+    //     $id = lastInsertID();
+    //     $club->id = $request->;
+    //     $club->name = $request->input('password');
 
-        $quiz1 = new Question;
-        // $quiz1 = Question::create($validated);
-        $quiz1->content = $request->input('content');
-        // フォームでtype=”file”としているので、file()でリクエストされたファイル情報を取得します
-        $quiz1->image = $path;
-        $quiz1->supplement = $request->input('supplement');
-        $quiz1->quiz_id = $request->input('quiz_id');
+    //     $user->name = $request->input('name');
+    //     $user->email = $request->input('email');
+    //     $user->password = $request->input('password');
+    //     // フォームでtype=”file”としているので、file()でリクエストされたファイル情報を取得します
+    //     $club->image = $path;
+    //     $quiz1->supplement = $request->input('supplement');
+    //     $quiz1->quiz_id = $request->input('quiz_id');
 
-        $quiz1->save();
+    //     $quiz1->save();
 
-        return redirect()->route('auth.quiz1');
-    }
+    //     return redirect()->route('auth.quiz1');
+    // }
 }
