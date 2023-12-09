@@ -18,9 +18,9 @@ class UserController extends Controller
             $managers = User::where('club_id', $user->club_id)->get();
         } elseif ($role == 2) {
             // 管理者2の場合、全ての管理者を取得
-            $managers = User::all();
+            $managers = User::with('club')->get();
+            
         }
-
         return view('dashboard', compact('managers', 'role'));
     }
 

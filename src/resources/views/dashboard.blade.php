@@ -20,7 +20,7 @@
                                     <th scope="col" class="px-6 py-3">
                                         メールアドレス
                                     </th>
-                                    @if ($role == 1)
+                                    @if ($role == 2)
                                     <th scope="col" class="px-6 py-3">
                                         所属サークル
                                     </th>
@@ -36,9 +36,9 @@
                                 <td class="px-6 py-4">
                                 {{ $manager->email }}
                                 </td>
-                                @if ($role == 1)
+                                @if ($role == 2)
                                 <td class="px-6 py-4">
-                                {{ $manager->club_id }}
+                                {{ $manager->club->name ?? 'N/A' }}
                                 </td>
                                 @endif
                             </tr>
