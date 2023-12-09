@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->comment('権限名');
             $table->timestamps();
         });
     }
