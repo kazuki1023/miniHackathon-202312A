@@ -45,4 +45,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function club()
+    {
+        return $this->belongsTo(Club::class, 'club_id');
+    }
 }
