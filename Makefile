@@ -1,7 +1,7 @@
 up:
 	docker compose up -d
-aritasan:
-	docker compose down --rmi all --volumes --remove-orphans
+# aritasan:
+# 	docker compose down --rmi all --volumes --remove-orphans
 app:
 	docker compose exec app bash
 app/install:
