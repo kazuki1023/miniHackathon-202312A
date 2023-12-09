@@ -27,7 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/create/user', [ProfileController::class, 'create'])->name('create.user');
+    Route::post('/create/user', [ProfileController::class, 'storeUser'])->name('store.user');
 });
+
 
 Route::get('/users', function () {
     return view('introduce.index');
