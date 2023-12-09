@@ -44,4 +44,18 @@ class ClubController extends Controller
 
     //     return redirect()->route('auth.quiz1');
     // }
+    public function update(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password'=> 'required',
+            'new_password' => 'required'
+        ]);
+        $user = new User;
+        $user->email = $request->input('email');
+        $user->password = $request->input('new_password');
+        $user->save();
+
+        return redirect()->route('dashboard');
+    }
 }
