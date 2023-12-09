@@ -18,9 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->unsignedBigInteger('role_id')->comment('権限ID');
+            $table->string('role')->comment('権限');
             $table->unsignedBigInteger('club_id')->comment('サークルID');
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->foreign('club_id')->references('id')->on('clubs')->onDelete('cascade');
             $table->timestamps();
         });
