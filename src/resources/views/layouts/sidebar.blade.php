@@ -38,6 +38,7 @@
                 </a>
             </li>
         </ul>
+        @if(auth()->user()->role == 'admin2')
         <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
             <li>
                 <a href="#"
@@ -53,5 +54,6 @@
                 </a>
             </li>
         </ul>
+        @endif
     </div>
 </aside>
