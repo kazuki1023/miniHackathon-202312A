@@ -30,6 +30,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/create/user', [ProfileController::class, 'create'])->name('create.user');
     Route::post('/create/user', [ProfileController::class, 'storeUser'])->name('store.user');
+    // サークル追加ルーティング処理
+    Route::get('/club/create', [ClubController::class, 'create'])->name('club.create');
+    Route::post('/club/store', [ClubController::class, 'store'])->name('club.store');
 });
 
 
@@ -37,8 +40,5 @@ Route::get('/users', function () {
     return view('introduce.index');
 });
 
-// サークル追加ルーティング処理
-Route::get('/club/create', [ClubController::class, 'create'])->name('club.create');
-Route::post('/club/store', [ClubController::class, 'store'])->name('club.store');
 
 require __DIR__.'/auth.php';
