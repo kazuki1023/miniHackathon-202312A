@@ -23,6 +23,7 @@ class UsersSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
                 'role' => 1,
+                'club_id' => 1,
             ],
             [
                 'name' => 'ユーザー2',
@@ -33,6 +34,7 @@ class UsersSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
                 'role' => 2,
+                'club_id' => 1,
             ],
             [
                 'name' => 'ユーザー3',
@@ -43,6 +45,7 @@ class UsersSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
                 'role' => 1,
+                'club_id' => 2,
             ],
         ]);
         
