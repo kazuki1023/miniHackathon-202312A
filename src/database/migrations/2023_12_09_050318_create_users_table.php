@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('role_id')->comment('権限ID');
+            $table->unsignedBigInteger('club_id')->comment('サークルID');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreign('club_id')->references('id')->on('clubs')->onDelete('cascade');
             $table->timestamps();
         });
     }
