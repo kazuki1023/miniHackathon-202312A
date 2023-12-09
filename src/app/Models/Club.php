@@ -9,6 +9,10 @@ class Club extends Model
 {
     protected $table = 'club';
 
+    protected $fillable = [
+        'name',
+    ];
+
     public function users()
     {
         return $this->hasMany(User::class, 'club_id');
