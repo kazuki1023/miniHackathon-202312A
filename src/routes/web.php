@@ -34,6 +34,7 @@ Route::get('/users', function () {
 });
 
 // サークル追加ルーティング処理
+Route::get('/club/index/{club_id}', [ClubController::class, 'index'])->name('club.index');
 Route::get('/club/create', [ClubController::class, 'create'])->name('club.create');
 Route::post('/club/store', [ClubController::class, 'store'])->name('club.store');
 

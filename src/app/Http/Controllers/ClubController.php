@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Club;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClubController extends Controller
 {
+    public function index($club_id)
+    {
+
+        $users=User::where('club_id',$club_id)->get();
+        return view('club.index',compact('users'));
+    }
+
     public function create()
     {
         return view('club.create');
