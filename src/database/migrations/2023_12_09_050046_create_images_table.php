@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('club_id')->comment('サークルID');
+            $table->foreign('club_id')->references('id')->on('clubs')->onDelete('cascade');
+            $table->string('image_url')->comment('画像URL');
             $table->timestamps();
         });
     }
