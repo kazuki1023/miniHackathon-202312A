@@ -98,9 +98,6 @@
                     <li>
                         <a href="#ratio_guide">男女比 &amp; 学部比</a>
                     </li>
-                    <li>
-                        <a href="#event_guide">イベント</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -159,12 +156,6 @@
     <main id="main-area">
         <section id="service">
             <h2 class="js_typing">慶應公認サークルTLA</h2>
-            <p class="service-lead">
-                <span class="bgextend bgRLextendTrigger">
-                    <span class="bgappearTrigger">TLAは今年で設立64年目の歴史あるサークル
-                    </span>
-                </span>
-            </p>
             <div class="service-area">
                 <section class="bgextend bgLRextendTrigger">
                     <div class="bgappearTrigger">
@@ -172,12 +163,9 @@
                             <h3 class="js_typing">練習頻度 &#47; 練習場所</h3>
                             <h4 class="js_typing">練習頻度</h4>
                             <p>月曜 &#126; 金曜の週５で活動中</p>
-                            <p>参加は自由、自分の予定に合わせて練習できます</p>
                         </header>
                         <h4 class="js_typing">練習場所</h4>
                         <p>練習は多摩川のコート、希望があれば新横浜や大井町でも &#033;</p>
-                        <p>日吉駅から5分</p>
-                        <p>日吉・三田から乗換なし</p>
                         <a href="#contact" class="btnlinestretches2">DM</a>
                     </div>
                     <div class="service-img-wrapper bgextend bgLRextendTrigger">
@@ -199,19 +187,8 @@
                         <div class="sex_chart"></div>
                         <div class="faculty_chart"></div>
                     </div>
-                    <div class="service-img-wrapper bgextend bgLRextendTrigger">
-                        <div class="bgappearTrigger">
-                            <div class="service-img01 service-img-propotion"></div>
-                        </div>
-                    </div>
                     <span id="appeal_guide"></span>
                 </section>
-                <h3 class="js_typing">夏合宿</h3>
-                <div class="service-img-wrapper bgextend bgLRextendTrigger">
-                    <div class="bgappearTrigger">
-                        <div class="service-img02"></div>
-                    </div>
-                </div>
             </div>
         </section>
         <div class="news-img-wrapper bgextend bgRLextendTrigger">
@@ -225,39 +202,6 @@
             </div>
             <span id="event_guide"></span>
         </div>
-        <h3 class="js_typing event_title">イベント</h3>
-        <ul id="gallery" class="gallery">
-            <li class="bgextend bgLRextendTrigger zoomInRotate">
-                <div class="bgappearTrigger">
-                    <a href="./img/plan/IMG_4135 .JPG" data-lightbox="gallery-group" data-title="2022.05. 練習終わり！">
-                        <img src="./img/plan/IMG_4135 .JPG" alt="">
-                    </a>
-                </div>
-            </li>
-            <li class="bgextend bgLRextendTrigger zoomInRotate">
-                <div class="bgappearTrigger">
-                    <a href="./img/plan/firstgradeCompa.jpg" data-lightbox="gallery-group"
-                        data-title="2022.06. １年生コンパ">
-                        <img src="./img/plan/firstgradeCompa.jpg" alt="">
-                    </a>
-                </div>
-            </li>
-            <li class="bgextend bgLRextendTrigger zoomInRotate">
-                <div class="bgappearTrigger">
-                    <a href="./img/plan/IMG_1728.jpg" data-lightbox="gallery-group" data-title="2022.07. 最終練アフター!!!">
-                        <img src="./img/plan/IMG_1728.jpg" alt="">
-                    </a>
-                </div>
-            </li>
-            <li class="bgextend bgLRextendTrigger zoomInRotate">
-                <div class="bgappearTrigger">
-                    <a href="./img/summercamp/IMG_2097.jpg" data-lightbox="gallery-group"
-                        data-title="2022.08. 夏合宿、サークル内対抗戦！">
-                        <img src="./img/summercamp/IMG_2097.jpg" alt="">
-                    </a>
-                </div>
-            </li>
-        </ul>
         <div class="bgextend bgLRextendTrigger">
             <div class="bgappearTrigger">
                 <section id="contact">
@@ -293,11 +237,8 @@
         <div class="footer-link">
             <ul>
                 <li><a href="#">Top</a></li>
-                <li><a href="#news_guide">News</a></li>
                 <li><a href="#service">practice</a></li>
                 <li><a href="#ratio_guide">ratio</a></li>
-                <li><a href="#appeal_guide">魅力</a></li>
-                <li><a href="#event_guide">イベント</a></li>
             </ul>
             <small>Copyright &copy; TLA.</small>
         </div>
