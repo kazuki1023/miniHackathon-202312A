@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('create_roles_tables', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name')->comment('権限名');
         });
     }
 
