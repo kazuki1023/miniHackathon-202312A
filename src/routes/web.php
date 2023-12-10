@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClubController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -28,7 +29,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/create/user', [ProfileController::class, 'create'])->name('create.user');
+    Route::post('/create/user', [ProfileController::class, 'storeUser'])->name('store.user');
+    // サークル追加ルーティング処理
+    Route::get('/club/create', [ClubController::class, 'create'])->name('club.create');
+    Route::post('/club/store', [ClubController::class, 'store'])->name('club.store');
 });
+
 
 Route::get('/users', function () {
     return view('introduce.index');
