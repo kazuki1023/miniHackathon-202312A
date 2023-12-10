@@ -29,7 +29,7 @@ class ClubController extends Controller
         
     //     // 最後のidを取得する
     //     $id = lastInsertID();
-    //     $club->id = $request->;
+    //     // $club->id = $request->;
     //     $club->name = $request->input('password');
 
     //     $user->name = $request->input('name');

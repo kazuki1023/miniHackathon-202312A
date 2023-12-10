@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+<<<<<<< HEAD
+=======
 use Illuminate\Support\Facades\DB;
+>>>>>>> 19f22c236302587086dce6aa80241537e2977c4d
 
 class ClubSeeder extends Seeder
 {
@@ -13,6 +16,24 @@ class ClubSeeder extends Seeder
      */
     public function run(): void
     {
+<<<<<<< HEAD
+        \DB::table('club')->insert([
+            [
+                'name' => 'tla',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'バロニー',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'エーデルロイテ',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+=======
         DB::table('clubs')->insert([
             [
                 'id' => 1,
@@ -47,6 +68,7 @@ class ClubSeeder extends Seeder
                 'twitter_url' => 'https://twitter.com/',
                 'line_url' => 'https://line.me/ja/'
             ]
+>>>>>>> 19f22c236302587086dce6aa80241537e2977c4d
         ]);
     }
 }

@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Club extends Model
 {
-    use HasFactory;
+    protected $table = 'club';
 
-    public function users(){
-        return $this->hasMany(User::class);
+    public function users()
+    {
+        return $this->hasMany(User::class, 'club_id');
     }
 }
+

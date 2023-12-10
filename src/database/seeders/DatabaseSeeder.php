@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+<<<<<<< HEAD
+        $this->call([
+            ClubSeeder::class,
+            UsersSeeder::class,
+            ContentsSeeder::class,
+=======
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -24,6 +30,7 @@ class DatabaseSeeder extends Seeder
             ClubSeeder::class,
             UserSeeder::class,
             ImageSeeder::class,
+>>>>>>> 19f22c236302587086dce6aa80241537e2977c4d
         ]);
     }
 }
